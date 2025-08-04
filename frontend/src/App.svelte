@@ -7,7 +7,7 @@
 
     chatLog = [...chatLog, { role: "user", text: userInput }];
 
-    const res = await fetch("http://localhost:8032", {
+    const res = await fetch("/impersonator_backend/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ user_message: userInput })
