@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: ./backend
+    container_name: fastapi-backend
+    ports:
+      - "8032:8000"
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: svelte-frontend
+    ports:
+      - "8033:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
