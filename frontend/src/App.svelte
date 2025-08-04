@@ -7,7 +7,7 @@
 
     chatLog = [...chatLog, { role: "user", text: userInput }];
 
-    const res = await fetch("http://localhost:8000/chat", {
+    const res = await fetch("http://localhost:8032", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ user_message: userInput })
