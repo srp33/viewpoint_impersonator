@@ -1,8 +1,9 @@
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 
-// https://vite.dev/config/
+// vite.config.js
 export default defineConfig({
-  plugins: [svelte()],
   base: '/impersonator/',
-})
+  plugins: [svelte()]
+});
+

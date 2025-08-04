@@ -4,6 +4,8 @@ WORKDIR /app
 COPY . .
 RUN npm install
 RUN npm run build
+RUN mkdir -p /usr/share/nginx/html/impersonator && \
+    cp -r /app/dist/* /usr/share/nginx/html/impersonator/
 
 # Stage 2: Serve
 FROM nginx:alpine
